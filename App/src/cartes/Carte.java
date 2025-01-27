@@ -2,53 +2,75 @@ package cartes;
 
 import java.util.*;
 
-
 /**
- * Class Carte
+ * Classe abstraite représentant une carte du jeu.
  */
 abstract public class Carte {
 
-	//
-	// Fields
-	//
+    //
+    // Champs
+    //
 
-  	private String nom;
-  	private String description;
-  
-	//
-	// Constructors
-	//
-	public Carte (String nomC) {
-		nom = nomC;
-	};
+    /** Nom de la carte. */
+    private String nom;
 
-	//
-	// Methods
-	//
+    /** Description de la carte. */
+    private String description;
 
+    //
+    // Constructeurs
+    //
 
-	//
-	// Accessor methods
-	//
+    /**
+     * Constructeur de base pour une carte.
+     * 
+     * @param nomCarte Nom de la carte.
+     */
+    public Carte(String nomCarte) {
+        this.nom = nomCarte;
+    }
 
-	public void setNom (String newVar) {
-		nom = newVar;
-	}
+    //
+    // Méthodes
+    //
 
-	public String getNom () {
-		return nom;
-	}
+    //
+    // Accesseurs
+    //
 
-	public void setDesc (String newVar) {
-		description = newVar;
-	}
+    /**
+     * Définit le nom de la carte.
+     * 
+     * @param nouveauNom Le nouveau nom de la carte.
+     */
+    public void setNom(String nouveauNom) {
+        this.nom = nouveauNom;
+    }
 
-	public String getDesc () {
-		return description;
-	}
+    /**
+     * Récupère le nom de la carte.
+     * 
+     * @return Le nom de la carte.
+     */
+    public String getNom() {
+        return this.nom;
+    }
 
-	//
-	// Other methods
-	//
+    /**
+     * Définit la description de la carte.
+     * 
+     * @param nouvelleDescription La nouvelle description de la carte.
+     */
+    public void setDescription(String nouvelleDescription) {
+        this.description = nouvelleDescription;
+    }
 
+    /**
+     * Récupère la description de la carte.
+     * 
+     * @return La description de la carte.
+     */
+    public String getDescription() {
+        return this.description;
+    }
 }

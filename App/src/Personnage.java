@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-import cartes.Categorie;
+import cartes.categories.Categorie;
 import effets.Qualite;
 
 

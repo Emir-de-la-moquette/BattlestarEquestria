@@ -1,5 +1,4 @@
-package cartes;
-
+package cartes.categories;
 
 /**
  * Class Ing�nierie
@@ -14,7 +13,9 @@ public class Ingenierie extends Categorie {
 				//
 				// Constructors
 				//
-				public Ingenierie () { };
+				public Ingenierie(String nom) {
+					super(nom, values.Categories.COMMANDEMENT);
+				};
   
 				//
 				// Methods

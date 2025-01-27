@@ -1,10 +1,9 @@
-package cartes;
-
+package cartes.categories;
 
 /**
- * Class Categorie
+ * Class Tactique
  */
-abstract public class Categorie {
+public class Tactique extends Categorie {
 
 				//
 				// Fields
@@ -14,7 +13,9 @@ abstract public class Categorie {
 				//
 				// Constructors
 				//
-				public Categorie () { };
+				public Tactique(String nom) {
+					super(nom, values.Categories.COMMANDEMENT);
+				};
   
 				//
 				// Methods

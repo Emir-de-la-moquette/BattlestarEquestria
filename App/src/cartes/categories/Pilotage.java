@@ -1,8 +1,9 @@
-package cartes;
+package cartes.categories;
+
 /**
- * Class Commandement
+ * Class Pilotage
  */
-public class Commandement extends Categorie {
+public class Pilotage extends Categorie {
 
 				//
 				// Fields
@@ -12,7 +13,9 @@ public class Commandement extends Categorie {
 				//
 				// Constructors
 				//
-				public Commandement () { };
+				public Pilotage(String nom) {
+					super(nom, values.Categories.COMMANDEMENT);
+				};
   
 				//
 				// Methods

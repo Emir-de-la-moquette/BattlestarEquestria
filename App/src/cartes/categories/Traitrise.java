@@ -1,9 +1,9 @@
-import cartes.categories.Categorie;
+package cartes.categories;
 
 /**
- * Class Traitris
+ * Class Traitrise
  */
-public class Traitris extends Categorie {
+public class Traitrise extends Categorie {
 
 				//
 				// Fields
@@ -13,7 +13,9 @@ public class Traitris extends Categorie {
 				//
 				// Constructors
 				//
-				public Traitris () { };
+				public Traitrise(String nom) {
+					super(nom, values.Categories.COMMANDEMENT);
+				};
   
 				//
 				// Methods

@@ -1,63 +1,64 @@
 package cartes;
+
+import cartes.categories.Categorie;
 import effets.Qualite;
 
 /**
- * Class Competence
+ * Classe représentant une carte de compétence.
  */
 public class Competence extends Carte {
 
-	//
-	// Fields
-	//
+    //
+    // Champs
+    //
 
-	private Categorie categorie;
-	private Qualite action;
-  
-	//
-	// Constructors
-	//
-	public Competence (String nomC, Categorie c) {
-		super(nomC);
-		categorie = c;
-	};
+    /** Action ou effet de la compétence. */
+    private Qualite action;
 
-	public Competence (String nomC, Categorie c, Qualite a) {
-		super(nomC);
-		categorie = c;
-		action = a;
-	};
+    //
+    // Constructeurs
+    //
 
-	//
-	// Methods
-	//
+    /**
+     * Constructeur de base pour une carte de compétence.
+     * 
+     * @param nomCarte Nom de la carte.
+     */
+    public Competence(String nomCarte) {
+        super(nomCarte);
+    }
 
+    /**
+     * Constructeur complet pour une carte de compétence.
+     * 
+     * @param nomCarte Nom de la carte.
+     * @param actionEffet Effet ou action de la carte.
+     */
+    public Competence(String nomCarte, Qualite actionEffet) {
+        super(nomCarte);
+        this.action = actionEffet;
+    }
 
-	//
-	// Accessor methods
-	//
-
-
-	public void setCategorie (Categorie newVar) {
-					categorie = newVar;
-	}
-
-
-	public Categorie getCategorie () {
-					return categorie;
-	}
+    //
+    // Accesseurs
+    //
 
 
-	public void setAction (Qualite newVar) {
-					action = newVar;
-	}
+    /**
+     * Définit l'effet ou l'action de la carte.
+     * 
+     * @param nouvelEffet La nouvelle action ou effet de la carte.
+     */
+    public void setAction(Qualite nouvelEffet) {
+        this.action = nouvelEffet;
+    }
 
-
-	public Qualite getAction () {
-					return action;
-	}
-
-				//
-				// Other methods
-				//
-
+    /**
+     * Récupère l'effet ou l'action de la carte.
+     * 
+     * @return L'action ou effet de la carte.
+     */
+    public Qualite getAction() {
+        return this.action;
+    }
 }

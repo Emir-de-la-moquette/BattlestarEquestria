@@ -1,137 +1,152 @@
-
 import java.util.*;
-
 import cartes.Carte;
-
 
 /**
  * Class Joueur
  */
 public class Joueur {
 
-				//
-				// Fields
-				//
+    //
+    // Fields
+    //
+    private HashMap<values.Decks, Carte[]> decks;
+    private Personnage personnage;
+    private String pseudo;
+    private Case position;
+    private int pointsAction;
+    private int pointsMouvement;
 
-  private HashMap<String, Carte[]> decks;
-  private Personnage perso;
-  private String pseudo;
-  private Case position;
-  private int actions;
-  private int mouvements;
-  
-				//
-				// Constructors
-				//
-				public Joueur () { };
-  
-				//
-				// Methods
-				//
+    //
+    // Constructors
+    //
+    public Joueur(String pseudo, Personnage personnage, Case position) {
+        this.pseudo = pseudo;
+        this.personnage = personnage;
+        this.position = position;
+        this.pointsAction = 0; // Par défaut
+        this.pointsMouvement = 0; // Par défaut
+        this.decks = new HashMap<>();
+    }
 
+    //
+    // Methods
+    //
 
-				//
-				// Accessor methods
-				//
+    /**
+     * Ajoute un deck à ce joueur.
+     * 
+     * @param typeDeck Le type de deck (ex. "attaque", "défense").
+     * @param cartes   Les cartes à inclure dans le deck.
+     */
+    public void ajouterDeck(values.Decks typeDeck, Carte[] cartes) {
+        decks.put(typeDeck, cartes);
+    }
 
-				/**
-				 * Set the value of decks
-				 * @param newVar the new value of decks
-				 */
-  public void setDecks (HashMap<String, Carte[]> newVar) {
-  				decks = newVar;
-  }
+    /**
+     * Récupère une carte spécifique depuis un deck.
+     * 
+     * @param typeDeck Le type de deck.
+     * @param index    L'index de la carte.
+     * @return La carte correspondante, ou null si elle n'existe pas.
+     */
+    public Carte piocherCarte(values.Decks typeDeck, int index) {
+        Carte[] deck = decks.get(typeDeck);
+        if (deck != null && index >= 0 && index < deck.length) {
+            return deck[index];
+        }
+        return null;
+    }
 
-				/**
-				 * Get the value of decks
-				 * @return the value of decks
-				 */
-  public HashMap<String, Carte[]> getDecks () {
-  				return decks;
-  }
+    /**
+     * Déplace le joueur vers une nouvelle position.
+     * 
+     * @param nouvellePosition La case cible.
+     */
+    public void deplacer(Case nouvellePosition) {
+        if (pointsMouvement > 0) {
+            position = nouvellePosition;
+            pointsMouvement--;
+            System.out.println(pseudo + " s'est déplacé vers " + nouvellePosition);
+        } else {
+            System.out.println(pseudo + " n'a plus de mouvements disponibles !");
+        }
+    }
 
-				/**
-				 * Set the value of perso
-				 * @param newVar the new value of perso
-				 */
-  public void setPerso (Personnage newVar) {
-  				perso = newVar;
-  }
+    /**
+     * Exécute une action spécifique.
+     * 
+     * @param actionDescription La description de l'action.
+     */
+    public void executerAction(String actionDescription) {
+        if (pointsAction > 0) {
+            pointsAction--;
+            System.out.println(pseudo + " exécute l'action : " + actionDescription);
+        } else {
+            System.out.println(pseudo + " n'a plus d'actions disponibles !");
+        }
+    }
 
-				/**
-				 * Get the value of perso
-				 * @return the value of perso
-				 */
-  public Personnage getPerso () {
-  				return perso;
-  }
+    /**
+     * Réinitialise les actions et mouvements pour un nouveau tour.
+     * 
+     * @param actions    Le nombre d'actions à attribuer.
+     * @param mouvements Le nombre de mouvements à attribuer.
+     */
+    public void initialiserTour(int actions, int mouvements) {
+        this.pointsAction = actions;
+        this.pointsMouvement = mouvements;
+        System.out.println(pseudo + " commence un nouveau tour avec " + actions + " actions et " + mouvements + " mouvements.");
+    }
 
-				/**
-				 * Set the value of pseudo
-				 * @param newVar the new value of pseudo
-				 */
-  public void setPseudo (String newVar) {
-  				pseudo = newVar;
-  }
+    //
+    // Accessor methods
+    //
 
-				/**
-				 * Get the value of pseudo
-				 * @return the value of pseudo
-				 */
-  public String getPseudo () {
-  				return pseudo;
-  }
+    public void setDecks(HashMap<values.Decks, Carte[]> decks) {
+        this.decks = decks;
+    }
 
-				/**
-				 * Set the value of position
-				 * @param newVar the new value of position
-				 */
-  public void setPosition (Case newVar) {
-  				position = newVar;
-  }
+    public HashMap<values.Decks, Carte[]> getDecks() {
+        return decks;
+    }
 
-				/**
-				 * Get the value of position
-				 * @return the value of position
-				 */
-  public Case getPosition () {
-  				return position;
-  }
+    public void setPersonnage(Personnage personnage) {
+        this.personnage = personnage;
+    }
 
-				/**
-				 * Set the value of actions
-				 * @param newVar the new value of actions
-				 */
-  public void setActions (int newVar) {
-  				actions = newVar;
-  }
+    public Personnage getPersonnage() {
+        return personnage;
+    }
 
-				/**
-				 * Get the value of actions
-				 * @return the value of actions
-				 */
-  public int getActions () {
-  				return actions;
-  }
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
 
-				/**
-				 * Set the value of mouvements
-				 * @param newVar the new value of mouvements
-				 */
-  public void setMouvements (int newVar) {
-  				mouvements = newVar;
-  }
+    public String getPseudo() {
+        return pseudo;
+    }
 
-				/**
-				 * Get the value of mouvements
-				 * @return the value of mouvements
-				 */
-  public int getMouvements () {
-  				return mouvements;
-  }
+    public void setPosition(Case position) {
+        this.position = position;
+    }
 
-				//
-				// Other methods
-				//
+    public Case getPosition() {
+        return position;
+    }
 
+    public void setPointsAction(int pointsAction) {
+        this.pointsAction = pointsAction;
+    }
+
+    public int getPointsAction() {
+        return pointsAction;
+    }
+
+    public void setPointsMouvement(int pointsMouvement) {
+        this.pointsMouvement = pointsMouvement;
+    }
+
+    public int getPointsMouvement() {
+        return pointsMouvement;
+    }
 }

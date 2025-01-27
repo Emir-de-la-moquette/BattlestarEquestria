@@ -36,24 +36,24 @@ public class Crise extends Carte {
 	// Accessor methods
 	//
 
-	public void setAction (Qualite newVar) {
-					action = newVar;
+	public void setAction (Qualite action) {
+		this.action = action;
 	}
 
 	public Qualite getAction () {
-					return action;
+		return action;
 	}
 
-	public void setSuper (boolean newVar) {
-					superCrise = newVar;
+	public void setSuper (boolean supC) {
+		superCrise = supC;
 	}
 
-	public boolean getSuper () {
-					return superCrise;
+	public boolean isSuper () {
+		return superCrise;
 	}
 
-				//
-				// Other methods
-				//
+	//
+	// Other methods
+	//
 
 }

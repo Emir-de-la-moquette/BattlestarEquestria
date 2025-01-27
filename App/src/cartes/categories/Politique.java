@@ -1,10 +1,9 @@
-package cartes;
-
+package cartes.categories;
 
 /**
- * Class Tactique
+ * Class Politique
  */
-public class Tactique extends Categorie {
+public class Politique extends Categorie {
 
 				//
 				// Fields
@@ -14,7 +13,9 @@ public class Tactique extends Categorie {
 				//
 				// Constructors
 				//
-				public Tactique () { };
+				public Politique(String nom) {
+					super(nom, values.Categories.COMMANDEMENT);
+				};
   
 				//
 				// Methods
