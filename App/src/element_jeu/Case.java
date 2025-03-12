@@ -1,9 +1,10 @@
-import cartes.categories.Categorie;
+package element_jeu;
+
 
 /**
- * Class Traitris
+ * Class Case
  */
-public class Traitris extends Categorie {
+public class Case {
 
 				//
 				// Fields
@@ -13,7 +14,7 @@ public class Traitris extends Categorie {
 				//
 				// Constructors
 				//
-				public Traitris () { };
+				public Case () { };
   
 				//
 				// Methods

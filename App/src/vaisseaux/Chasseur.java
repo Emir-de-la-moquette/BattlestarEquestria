@@ -1,4 +1,6 @@
-
+package vaisseaux;
+import characters.Joueur;
+import element_jeu.*;
 
 /**
  * Class Chasseur

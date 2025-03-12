@@ -1,9 +1,10 @@
-import cartes.Poney;
+package element_jeu;
+
 
 /**
- * Class Gentil
+ * Class aerien
  */
-public class Gentil extends Poney {
+public class aerien extends Zone {
 
 				//
 				// Fields
@@ -13,7 +14,7 @@ public class Gentil extends Poney {
 				//
 				// Constructors
 				//
-				public Gentil () { };
+				public aerien () { };
   
 				//
 				// Methods

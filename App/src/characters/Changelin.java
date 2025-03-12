@@ -1,3 +1,4 @@
+package characters;
 import cartes.Poney;
 import effets.Qualite;
 

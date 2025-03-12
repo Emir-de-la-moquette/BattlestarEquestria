@@ -1,9 +1,10 @@
+package element_jeu;
 
 
 /**
- * Class aerien
+ * Class interieur
  */
-public class aerien extends Zone {
+public class interieur extends Zone {
 
 				//
 				// Fields
@@ -13,7 +14,7 @@ public class aerien extends Zone {
 				//
 				// Constructors
 				//
-				public aerien () { };
+				public interieur () { };
   
 				//
 				// Methods

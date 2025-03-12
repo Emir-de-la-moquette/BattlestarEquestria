@@ -1,4 +1,4 @@
-import cartes.Poney;
+package cartes;
 import effets.Qualite;
 
 /**

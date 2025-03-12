@@ -1,5 +1,8 @@
+package vaisseaux;
 
 import java.util.*;
+
+import element_jeu.Resources;
 
 
 /**

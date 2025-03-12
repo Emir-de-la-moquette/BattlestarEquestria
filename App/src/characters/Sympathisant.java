@@ -1,9 +1,10 @@
-
+package characters;
+import cartes.Poney;
 
 /**
- * Class Case
+ * Class Sympathisant
  */
-public class Case {
+public class Sympathisant extends Poney {
 
 				//
 				// Fields
@@ -13,7 +14,7 @@ public class Case {
 				//
 				// Constructors
 				//
-				public Case () { };
+				public Sympathisant () { };
   
 				//
 				// Methods

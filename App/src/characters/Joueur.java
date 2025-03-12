@@ -1,5 +1,9 @@
+package characters;
+
 import java.util.*;
 import cartes.Carte;
+import element_jeu.Case;
+
 
 /**
  * Class Joueur
