@@ -1,11 +1,9 @@
-package effets;
-
-import values.MomentPartie;
+package categories;
 
 /**
- * Class PointZone
+ * Class Politique
  */
-public class PointZone extends Qualite {
+public class Politique extends Categorie {
 
 				//
 				// Fields
@@ -15,8 +13,9 @@ public class PointZone extends Qualite {
 				//
 				// Constructors
 				//
-				public PointZone (MomentPartie moment) { 
-					super(moment);};
+				public Politique() {
+					super(values.Categories.COMMANDEMENT, "ffff00");
+				};
   
 				//
 				// Methods

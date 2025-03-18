@@ -1,39 +1,45 @@
 package App.game;
 import characters.Personnage;
-import values.Categories;
+import categories.*;
 
 public class Persos {
     public static void main(String[] args) {
-        new Personnage("Posada",Categories.COMMANDEMENT);
-        new Personnage("Luna",Categories.COMMANDEMENT);
-        new Personnage("Aryanne",Categories.COMMANDEMENT);
-        new Personnage("Shadow Tempes",Categories.COMMANDEMENT);
-        new Personnage("Starlight Glimmer",Categories.COMMANDEMENT);
-        new Personnage("Vira",Categories.COMMANDEMENT);
+
+        Categorie commandement = new Commandement();
+        Categorie politique = new Politique();
+        Categorie pilotage = new Pilotage();
+        Categorie ingenieurie = new Ingenierie();
+
+        new Personnage("Posada",commandement);
+        new Personnage("Luna",commandement);
+        new Personnage("Aryanne",commandement);
+        new Personnage("Shadow Tempes",commandement);
+        new Personnage("Starlight Glimmer",commandement);
+        new Personnage("Vira",commandement);
 
 
-        new Personnage("Twilight Sparkle (nerd)",Categories.INGENIERIE);
-        new Personnage("Applejack",Categories.INGENIERIE);
-        new Personnage("Fluttershy",Categories.INGENIERIE);
-        new Personnage("Rarity",Categories.INGENIERIE);
-        new Personnage("Trixie Lulamoon",Categories.INGENIERIE);
-        new Personnage("Infirmière RedHeart",Categories.INGENIERIE);
-        new Personnage("Walter White",Categories.INGENIERIE);
+        new Personnage("Twilight Sparkle (nerd)",ingenieurie);
+        new Personnage("Applejack",ingenieurie);
+        new Personnage("Fluttershy",ingenieurie);
+        new Personnage("Rarity",ingenieurie);
+        new Personnage("Trixie Lulamoon",ingenieurie);
+        new Personnage("Infirmière RedHeart",ingenieurie);
+        new Personnage("Walter White",ingenieurie);
 
 
-        new Personnage("Twilight Sparkle",Categories.POLITIQUE);
-        new Personnage("Celestia",Categories.POLITIQUE);
-        new Personnage("Cadence",Categories.POLITIQUE);
-        new Personnage("Pinky Pie",Categories.POLITIQUE);
-        new Personnage("Starlight Glimmer (pol)",Categories.POLITIQUE);
-        new Personnage("Autumn Blaze",Categories.POLITIQUE);
+        new Personnage("Twilight Sparkle",politique);
+        new Personnage("Celestia",politique);
+        new Personnage("Cadence",politique);
+        new Personnage("Pinky Pie",politique);
+        new Personnage("Starlight Glimmer (pol)",politique);
+        new Personnage("Autumn Blaze",politique);
 
         
-        new Personnage("Spitfire",Categories.PILOTAGE);
-        new Personnage("Casse-Cou",Categories.PILOTAGE);
-        new Personnage("Rainbow Dash",Categories.PILOTAGE);
-        new Personnage("Shining Armor",Categories.PILOTAGE);
-        new Personnage("Sunset Shimmer",Categories.PILOTAGE);
-        new Personnage("Soarin",Categories.PILOTAGE);
+        new Personnage("Spitfire",pilotage);
+        new Personnage("Casse-Cou",pilotage);
+        new Personnage("Rainbow Dash",pilotage);
+        new Personnage("Shining Armor",pilotage);
+        new Personnage("Sunset Shimmer",pilotage);
+        new Personnage("Soarin",pilotage);
     }
 }

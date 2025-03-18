@@ -1,5 +1,6 @@
 package effets;
 
+import values.MomentPartie;
 
 /**
  * Class ModifDE
@@ -14,7 +15,8 @@ public class ModifDE extends Qualite {
 				//
 				// Constructors
 				//
-				public ModifDE () { };
+				public ModifDE (MomentPartie moment) { 
+					super(moment);};
   
 				//
 				// Methods

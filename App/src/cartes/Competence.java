@@ -1,6 +1,6 @@
 package cartes;
 
-import cartes.categories.Categorie;
+import categories.Categorie;
 import effets.Qualite;
 
 /**

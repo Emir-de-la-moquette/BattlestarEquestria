@@ -1,9 +1,9 @@
-package cartes.categories;
+package categories;
 
 /**
- * Class Ing�nierie
+ * Class Tactique
  */
-public class Ingenierie extends Categorie {
+public class Tactique extends Categorie {
 
 				//
 				// Fields
@@ -13,8 +13,8 @@ public class Ingenierie extends Categorie {
 				//
 				// Constructors
 				//
-				public Ingenierie(String nom) {
-					super(nom, values.Categories.COMMANDEMENT);
+				public Tactique() {
+					super(values.Categories.COMMANDEMENT, "483d8b");
 				};
   
 				//

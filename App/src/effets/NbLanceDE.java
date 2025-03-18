@@ -1,5 +1,6 @@
 package effets;
 
+import values.MomentPartie;
 
 /**
  * Class NbLanceDE
@@ -14,7 +15,8 @@ public class NbLanceDE extends Qualite {
 				//
 				// Constructors
 				//
-				public NbLanceDE () { };
+				public NbLanceDE (MomentPartie moment) { 
+					super(moment);};
   
 				//
 				// Methods

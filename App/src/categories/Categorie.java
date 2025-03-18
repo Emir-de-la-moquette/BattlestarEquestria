@@ -1,11 +1,11 @@
-package cartes.categories;
+package categories;
 
 import cartes.Competence;
 
 /**
  * Classe abstraite représentant une catégorie de compétence.
  */
-abstract public class Categorie extends Competence{
+abstract public class Categorie{
 
     //
     // Champs
@@ -13,31 +13,21 @@ abstract public class Categorie extends Competence{
 
     /** Nom de la catégorie. */
     private values.Categories nomCategorie;
+    /** couleur. */
+    private String couleur;
 
     //
     // Constructeurs
     //
 
-    /**
-     * Constructeur de base pour une catégorie.
-     * 
-     * @param nom nom de la carte
-     * @param cat Nom de la catégorie.
-     */
-    public Categorie(String nom, String cat) {
-        super(nom);
-        this.nomCategorie = values.Categories.getCategorie(cat);
-    }
 
-    /**
-     * Constructeur de base pour une catégorie.
-     * 
-     * @param nom Nom de la carte.
-     * @param cat Nom de la catégorie.
-     */
-    public Categorie(String nom, values.Categories cat) {
-        super(nom);
+    public Categorie(String cat, String couleur) {
+        this.nomCategorie = values.Categories.getCategorie(cat);
+        this.couleur = couleur;
+    }
+    public Categorie(values.Categories cat, String couleur) {
         this.nomCategorie = cat;
+        this.couleur = couleur;
     }
 
     //

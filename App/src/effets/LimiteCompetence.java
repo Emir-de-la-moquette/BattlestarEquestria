@@ -1,5 +1,6 @@
 package effets;
 
+import values.MomentPartie;
 
 /**
  * Class LimiteCompetence
@@ -14,7 +15,9 @@ public class LimiteCompetence extends Qualite {
 				//
 				// Constructors
 				//
-				public LimiteCompetence () { };
+				public LimiteCompetence (MomentPartie moment) { 
+					super(moment);
+				};
   
 				//
 				// Methods

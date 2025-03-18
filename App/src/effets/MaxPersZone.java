@@ -1,5 +1,6 @@
 package effets;
 
+import values.MomentPartie;
 
 /**
  * Class MaxPersZone
@@ -14,7 +15,8 @@ public class MaxPersZone extends Qualite {
 				//
 				// Constructors
 				//
-				public MaxPersZone () { };
+				public MaxPersZone (MomentPartie moment) { 
+					super(moment);};
   
 				//
 				// Methods

@@ -1,9 +1,11 @@
-package cartes.categories;
+package categories;
+
+import values.*;
 
 /**
- * Class Traitrise
+ * Class Commandement
  */
-public class Traitrise extends Categorie {
+public class Commandement extends Categorie {
 
 				//
 				// Fields
@@ -13,8 +15,8 @@ public class Traitrise extends Categorie {
 				//
 				// Constructors
 				//
-				public Traitrise(String nom) {
-					super(nom, values.Categories.COMMANDEMENT);
+				public Commandement() {
+					super(values.Categories.COMMANDEMENT, "9acd32");
 				};
   
 				//

@@ -3,6 +3,7 @@ package characters;
 import java.util.*;
 
 import values.*;
+import categories.*;
 import effets.Qualite;
 
 
@@ -16,7 +17,7 @@ public class Personnage {
 				//
 
   private String nom;
-  private Categories classe;
+  private Categorie classe;
   private boolean Ulti;
   private Qualite defaut;
   private Qualite passif;
@@ -24,10 +25,11 @@ public class Personnage {
 		//
 		// Constructors
 		//
-	public Personnage (String nom, Categories classe) {
+	public Personnage (String nom, Categorie classe) {
 		this.nom = nom;
 		this.classe = classe;
 	};
+
 
 		//
 		// Methods
@@ -58,7 +60,7 @@ public class Personnage {
 					 * Set the value of classe
 					 * @param newVar the new value of classe
 					 */
-	public void setClasse (Categories newVar) {
+	public void setClasse (Categorie newVar) {
 					classe = newVar;
 	}
 
@@ -66,7 +68,7 @@ public class Personnage {
 					 * Get the value of classe
 					 * @return the value of classe
 					 */
-	public Categories getClasse () {
+	public Categorie getClasse () {
 					return classe;
 	}
 

@@ -1,9 +1,9 @@
-package cartes.categories;
+package categories;
 
 /**
- * Class Politique
+ * Class Ing�nierie
  */
-public class Politique extends Categorie {
+public class Ingenierie extends Categorie {
 
 				//
 				// Fields
@@ -13,8 +13,8 @@ public class Politique extends Categorie {
 				//
 				// Constructors
 				//
-				public Politique(String nom) {
-					super(nom, values.Categories.COMMANDEMENT);
+				public Ingenierie() {
+					super(values.Categories.COMMANDEMENT, "008b8b");
 				};
   
 				//

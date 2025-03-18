@@ -2,33 +2,37 @@ package effets;
 
 import java.util.*;
 
+import values.MomentPartie;
+
 
 /**
  * Class Qualite
  */
 abstract public class Qualite {
 
-				//
-				// Fields
-				//
+	//
+	// Fields
+	//
+	MomentPartie moment;
 
-  
-				//
-				// Constructors
-				//
-				public Qualite () { };
-  
-				//
-				// Methods
-				//
+	//
+	// Constructors
+	//
+	public Qualite (MomentPartie moment) { 
+		this.moment = moment;
+	};
+
+	//
+	// Methods
+	//
 
 
-				//
-				// Accessor methods
-				//
+	//
+	// Accessor methods
+	//
 
-				//
-				// Other methods
-				//
+	//
+	// Other methods
+	//
 
 }

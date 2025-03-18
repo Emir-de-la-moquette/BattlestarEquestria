@@ -1,9 +1,9 @@
-package cartes.categories;
+package categories;
 
 /**
- * Class Tactique
+ * Class Traitrise
  */
-public class Tactique extends Categorie {
+public class Traitrise extends Categorie {
 
 				//
 				// Fields
@@ -13,8 +13,8 @@ public class Tactique extends Categorie {
 				//
 				// Constructors
 				//
-				public Tactique(String nom) {
-					super(nom, values.Categories.COMMANDEMENT);
+				public Traitrise() {
+					super(values.Categories.COMMANDEMENT, "c4bd97");
 				};
   
 				//

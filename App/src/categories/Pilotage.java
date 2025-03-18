@@ -1,4 +1,4 @@
-package cartes.categories;
+package categories;
 
 /**
  * Class Pilotage
@@ -13,8 +13,8 @@ public class Pilotage extends Categorie {
 				//
 				// Constructors
 				//
-				public Pilotage(String nom) {
-					super(nom, values.Categories.COMMANDEMENT);
+				public Pilotage() {
+					super(values.Categories.COMMANDEMENT, "ff0000");
 				};
   
 				//
